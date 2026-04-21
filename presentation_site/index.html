@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Churn Analytics | Revenue Protection Dashboard</title>
+    <meta name="description"
+        content="Predictive analytics for telecom customer churn reduction and revenue preservation.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="glow-bg"></div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">📊</span>
+                <span class="logo-text">Churn<span class="accent">Guard</span></span>
+            </div>
+            <div class="nav-links">
+                <a href="#overview">Overview</a>
+                <a href="#drivers">Churn Drivers</a>
+                <a href="#strategies">Strategies</a>
+                <a href="#impact" class="btn-primary">Business Impact</a>
+            </div>
+        </div>
+    </nav>
+
+    <header id="overview" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="fade-in">Telecom Revenue <br><span class="gradient-text">Protection Analytics</span></h1>
+                <p class="fade-in delay-1">Predicting subscriber churn and implementing high-ROI retention strategies
+                    for an enterprise-scale base of 1,000,000+ customers.</p>
+                <div class="hero-stats fade-in delay-2">
+                    <div class="hero-stat-card">
+                        <span class="label">Annual Revenue at Risk</span>
+                        <span class="value">$54,000,000</span>
+                    </div>
+                    <div class="hero-stat-card">
+                        <span class="label">Current Churn Rate</span>
+                        <span class="value">18.00%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="kpis" class="kpi-grid fade-in delay-3">
+            <div class="kpi-card">
+                <h3>Total Customer Base</h3>
+                <p class="kpi-value">1,000,000</p>
+                <span class="kpi-meta">Across All Segments</span>
+            </div>
+            <div class="kpi-card">
+                <h3>Model Performance</h3>
+                <p class="kpi-value accent-blue">0.82 AUC</p>
+                <span class="kpi-meta">Optimized Gradient Boosting</span>
+            </div>
+            <div class="kpi-card">
+                <h3>Retention Upside</h3>
+                <p class="kpi-value accent-green">+$20.4M</p>
+                <span class="kpi-meta">Preserved Revenue Potential</span>
+            </div>
+        </section>
+
+        <section id="drivers" class="section">
+            <div class="section-header">
+                <h2>Critical <span class="gradient-text">Churn Drivers</span></h2>
+                <p>Top features increasing churn probability identified via Logistic Regression coefficients.</p>
+            </div>
+            <div class="chart-container">
+                <div class="chart-wrapper">
+                    <h3>Churn Risk by Contract</h3>
+                    <canvas id="contractChart"></canvas>
+                </div>
+                <div class="chart-wrapper">
+                    <h3>Churn Risk by Tenure</h3>
+                    <canvas id="tenureChart"></canvas>
+                </div>
+            </div>
+            <div class="chart-container">
+                <div class="chart-wrapper">
+                    <h3>Churn by Payment Method</h3>
+                    <canvas id="paymentChart"></canvas>
+                </div>
+                <div class="chart-wrapper">
+                    <h3>Churn by Internet Service</h3>
+                    <canvas id="internetChart"></canvas>
+                </div>
+            </div>
+            <div class="insight-highlights">
+                <div class="insight-pill">🛑 Month-to-Month Contract (+42% Risk)</div>
+                <div class="insight-pill">📡 Fiber Optic Internet (+41% Risk)</div>
+                <div class="insight-pill">💳 Electronic Check (+45% Risk)</div>
+                <div class="insight-pill">📈 Short Tenure (<12mo: +47% Risk)</div>
+                </div>
+        </section>
+
+        <section id="strategies" class="section">
+            <div class="section-header">
+                <h2>Retention <span class="gradient-text">Strategies</span></h2>
+                <p>Modeled interventions to preserve revenue and increase customer LTV.</p>
+            </div>
+            <div class="strategy-grid">
+                <div class="strategy-card winner">
+                    <div class="badge">Highest Impact</div>
+                    <h3>1. Contract Migration</h3>
+                    <p>Converting high-risk month-to-month fiber customers to 12-month fixed terms.</p>
+                    <div class="strategy-stats">
+                        <div class="stat"><span>Preserved</span><strong>$14.2M</strong></div>
+                        <div class="stat"><span>ROI</span><strong class="positive">206%</strong></div>
+                    </div>
+                </div>
+                <div class="strategy-card">
+                    <h3>2. Lifecycle Retention</h3>
+                    <p>Automated onboarding bundles for customers in the critical first-6-month window.</p>
+                    <div class="strategy-stats">
+                        <div class="stat"><span>Preserved</span><strong>$3.8M</strong></div>
+                        <div class="stat"><span>ROI</span><strong class="positive">133%</strong></div>
+                    </div>
+                </div>
+                <div class="strategy-card">
+                    <h3>3. Fiber Optimization</h3>
+                    <p>Price-value bundle interventions for high-ARPU fiber optic subscribers.</p>
+                    <div class="strategy-stats">
+                        <div class="stat"><span>Preserved</span><strong>$2.4M</strong></div>
+                        <div class="stat"><span>ROI</span><strong class="positive">50%</strong></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="impact" class="impact-section">
+            <div class="impact-content">
+                <h2>Market <span class="white-text">Scalability</span></h2>
+                <p>Projected impact for an operator with 1 million subscribers.</p>
+                <div class="impact-large">
+                    <span class="impact-label">Annual Revenue Preserved</span>
+                    <span class="impact-value">$14M – $20M</span>
+                </div>
+                <div class="impact-footer">
+                    <p>Based on a 1.5–2.5% reduction in overall churn using commitment-based mechanisms.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-info">
+                <h4>Data Science Project in Business</h4>
+                <p>Corvinus University of Budapest | Spring 2026</p>
+                <p class="team">Team: Azim, Máté, Jose</p>
+            </div>
+            <div class="footer-tag">
+                <p>Modeled on Kaggle Telco Dataset</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
